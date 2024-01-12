@@ -41,7 +41,7 @@ new class extends Component{
             </x-slot:value>
             <x-slot:sub-value>
                 <h6 class="text-gray-500 dark:text-gray-400 text-sm">
-                    <a href="{{env("APP_URL") . "/" . $url->short_url}}" target="_blank">{{env("APP_URL") . "/" . $url->short_url}}</a>
+                    <a href="{{route('links.show', $url->short_url)}}" target="_blank">{{route('links.show', $url->short_url)}}</a>
                 </h6>
             </x-slot:sub-value>
             <x-slot:actions>

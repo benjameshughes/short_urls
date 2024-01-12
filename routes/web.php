@@ -24,9 +24,9 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::get('/{id}', [LinksController::class, 'show'])->name('links.show')->prefix('link');
+// Route::get('/{id}', [LinksController::class, 'show'])->name('links.show')->prefix('link');
 
 Route::resource('links', LinksController::class)->middleware(['auth', 'verified'])->only([
-    'index', 'create', 'store']);
+    'index', 'create', 'store', 'edit', 'update', 'destroy','show']);
 
 require __DIR__.'/auth.php';
