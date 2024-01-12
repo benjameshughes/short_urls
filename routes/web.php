@@ -24,7 +24,8 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::resource('links', LinksController::class)->middleware(['auth']);
+Route::resource('links', LinksController::class)->middleware(['auth', 'verified'])->only([
+    'index', 'create', 'store', 'show']);
 
 // Route::get('/{id}', [LinksController::class, 'show'])->name('links.show');
 
