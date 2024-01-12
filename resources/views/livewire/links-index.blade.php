@@ -46,7 +46,7 @@ new class extends Component{
             </x-slot:sub-value>
             <x-slot:actions>
                 {{-- <x-button icon="o-link" class="text-blue-500" target="_blank" href="{{route('links.show', $url->id)}}" /> --}}
-                <x-badge value="{{$url->vists}}" class="badge-primary" />
+                <span class="text-gray-500 dark:text-gray-400 text-sm">{{$url->visits}} clicks</span>
                 <x-button icon="o-trash" class="text-red-500" wire:click="delete('{{$url->id}}')" spinner />
             </x-slot:actions>
         </x-list-item>
