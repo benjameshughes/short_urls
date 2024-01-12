@@ -26,6 +26,6 @@ Route::view('profile', 'profile')
 
 Route::resource('links', LinksController::class)->middleware(['auth']);
 
-Route::get('/{id}', [LinksController::class, 'show'])->name('links.show');
+// Route::get('/{id}', [LinksController::class, 'show'])->name('links.show');
 
 require __DIR__.'/auth.php';
